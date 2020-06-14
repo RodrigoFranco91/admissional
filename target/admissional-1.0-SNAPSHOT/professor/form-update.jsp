@@ -13,7 +13,7 @@
     </head>
 <body>
 	<h1>Alterando Cadastro do Professor: ID = ${professor.id} - Nome = ${professor.nome}</h1>
-	<form action="alteraProfessor">
+	<form action="AlteraProfessorServlet">
 		<input type="hidden" name="id" value="${professor.id }" />
 		
 		<label >Nome:</label>
