@@ -13,7 +13,7 @@
     </head>
 <body>
 	<h1>Cadastro de Aluno:</h1>
-	<form action="cadastroAluno">
+	<form action="CadastroAlunoServlet">
 		<label>Nome:</label>
 		<input type="text" name="nome"/></br></br>
 		

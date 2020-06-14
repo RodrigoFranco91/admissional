@@ -8,7 +8,6 @@ package br.com.rodrigo.admissional.servlet.professor;
 import br.com.rodrigo.admissional.model.Professor;
 import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;

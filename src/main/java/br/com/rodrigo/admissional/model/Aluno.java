@@ -15,37 +15,56 @@ import javax.persistence.Id;
  * @author rodri
  */
 @Entity
-public class Aluno implements IUsuarios{
+public class Aluno implements IUsuarios {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String nome;
-	private Integer matricula;
-	
-	@Override
-	public void definirNome(String nome) {
-		this.nome = nome;
-		
-	}
-	@Override
-	public String obterNome() {
-		return this.nome;
-	}
-	@Override
-	public void definirMatricula(Integer numeroMatricula) {
-		this.matricula = numeroMatricula;
-	}
-	@Override
-	public Integer obterMatricula() {
-		return this.matricula;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private Integer matricula;
+
+    @Override
+    public void definirNome(String nome) {
+        this.setNome(nome);
+    }
+
+    @Override
+    public String obterNome() {
+        return this.getNome();
+    }
+
+    @Override
+    public void definirMatricula(Integer numeroMatricula) {
+        this.setMatricula(numeroMatricula);
+    }
+
+    @Override
+    public Integer obterMatricula() {
+        return this.getMatricula();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getMatricula() {
+        return this.matricula;
+    }
+
+    public void setMatricula(Integer matricula) {
+        this.matricula = matricula;
+    }
+
 }

@@ -10,10 +10,13 @@ package br.com.rodrigo.admissional.model;
  * @author rodri
  */
 public interface IUsuarios {
-    
-    	public void definirNome(String nome);
-	public String obterNome();
-	public void definirMatricula(Integer numeroMatricula);
-	public Integer obterMatricula();
-    
+
+    public void definirNome(String nome);
+
+    public String obterNome();
+
+    public void definirMatricula(Integer numeroMatricula);
+
+    public Integer obterMatricula();
+
 }

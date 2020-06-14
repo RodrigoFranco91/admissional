@@ -8,7 +8,6 @@ package br.com.rodrigo.admissional.servlet.professor;
 import br.com.rodrigo.admissional.model.Professor;
 import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,12 +26,12 @@ public class AlteraProfessorServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         Professor professor = new Professor();
         professor.setId(Long.parseLong(request.getParameter("id")));
         professor.definirNome(request.getParameter("nome"));
         professor.setTitulacao(request.getParameter("titulacao"));
-        
+
         pr.update(professor);
 
         RequestDispatcher rd = request.getRequestDispatcher("ListaProfessoresServlet");

@@ -21,13 +21,13 @@ import javax.servlet.http.HttpServletResponse;
  * @author rodri
  */
 public class FormUpdateProfessorServlet extends HttpServlet {
-    
+
     @Inject
     private ProfessorRepository pr;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         Long id = Long.parseLong(request.getParameter("id"));
         Professor professor = pr.find(id);
         request.setAttribute("professor", professor);

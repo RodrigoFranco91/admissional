@@ -13,7 +13,7 @@
     </head>
 <body>
 	<h1>Alterando Cadastro do Aluno: ID = ${aluno.id} - Nome = ${aluno.nome}</h1>
-	<form action="alteraAluno">
+	<form action="AlteraAlunoServlet">
 		<input type="hidden" name="id" value="${aluno.id }" />
 		
 		<label >Nome:</label>

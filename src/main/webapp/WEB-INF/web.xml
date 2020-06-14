@@ -24,6 +24,30 @@
         <servlet-name>FormUpdateProfessorServlet</servlet-name>
         <servlet-class>br.com.rodrigo.admissional.servlet.professor.FormUpdateProfessorServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlteraAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.AlteraAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.CadastroAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeletaAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.DeletaAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.FormAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormUpdateAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.FormUpdateAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.aluno.ListaAlunoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FormProfessorServlet</servlet-name>
         <url-pattern>/FormProfessorServlet</url-pattern>
@@ -47,6 +71,30 @@
     <servlet-mapping>
         <servlet-name>FormUpdateProfessorServlet</servlet-name>
         <url-pattern>/FormUpdateProfessorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlteraAlunoServlet</servlet-name>
+        <url-pattern>/AlteraAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroAlunoServlet</servlet-name>
+        <url-pattern>/CadastroAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletaAlunoServlet</servlet-name>
+        <url-pattern>/DeletaAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormAlunoServlet</servlet-name>
+        <url-pattern>/FormAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormUpdateAlunoServlet</servlet-name>
+        <url-pattern>/FormUpdateAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaAlunoServlet</servlet-name>
+        <url-pattern>/ListaAlunoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

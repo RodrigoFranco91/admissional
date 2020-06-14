@@ -24,10 +24,10 @@ public class DeletaProfessorServlet extends HttpServlet {
 
     @Inject
     private ProfessorRepository pr;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         Professor professor = new Professor();
         professor.setId(Long.parseLong(request.getParameter("id")));
         pr.remove(professor);

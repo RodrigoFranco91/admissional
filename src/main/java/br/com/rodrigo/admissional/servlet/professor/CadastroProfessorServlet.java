@@ -8,8 +8,6 @@ package br.com.rodrigo.admissional.servlet.professor;
 import br.com.rodrigo.admissional.model.Professor;
 import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,9 +32,7 @@ public class CadastroProfessorServlet extends HttpServlet {
         professor.setTitulacao(request.getParameter("titulacao"));
         pr.create(professor);
 
-        List<Professor> professores = pr.findAll();
-        request.setAttribute("professores", professores);
-        RequestDispatcher rd = request.getRequestDispatcher("professor/list-professor.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("ListaProfessoresServlet");
         rd.forward(request, response);
 
     }

@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Professor implements IUsuarios {
 
@@ -22,7 +21,7 @@ public class Professor implements IUsuarios {
 
     @Override
     public void definirNome(String nome) {
-       this.setNome(nome);
+        this.setNome(nome);
     }
 
     @Override

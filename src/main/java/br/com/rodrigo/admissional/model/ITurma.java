@@ -10,8 +10,10 @@ package br.com.rodrigo.admissional.model;
  * @author rodri
  */
 public interface ITurma {
-    
-    	public boolean estaAberta();
-	public void definirProfessor(Professor professor);
-	public void incluirAluno(Aluno aluno);
+
+    public boolean estaAberta();
+
+    public void definirProfessor(Professor professor);
+
+    public void incluirAluno(Aluno aluno);
 }

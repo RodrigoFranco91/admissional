@@ -27,12 +27,12 @@
 				<th>${aluno.nome}</th>
 				<th>${aluno.matricula}</th>
 				<th></th>
-				<td><a href="removeAluno?id=${aluno.id}">Deletar</a></td>
-				<td><a href="atualizaAluno?id=${aluno.id}">Alterar</a></td>
+				<td><a href="DeletaAlunoServlet?id=${aluno.id}">Deletar</a></td>
+				<td><a href="FormUpdateAlunoServlet?id=${aluno.id}">Alterar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="aluno">Cadastrar novo Aluno</a>
+	<a href="FormAlunoServlet">Cadastrar novo Aluno</a>
 	<br />
 	<br />
 </body>
