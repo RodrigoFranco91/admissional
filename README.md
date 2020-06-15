@@ -1,4 +1,5 @@
 # admissional
+
 Repositório para o Projeto Teste Admissional da empresa B2ML.
 
 Configuração Inicial para executar a aplicação:
