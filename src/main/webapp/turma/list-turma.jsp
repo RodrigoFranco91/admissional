@@ -45,8 +45,8 @@
 				<th></th>
 				<td><a href="DeletaTurmaServlet?id=${turma.id}">Deletar</a></td>
 				<td><a href="FormUpdateTurmaServlet?id=${turma.id}">Alterar</a></td>
-                                <td><a href="AdicionaAlunoServlet?id=${turma.id}">Adicionar Alunos</a></td>
-				<td><a href="ListaAlunoServlet?id=${turma.id}">Ver Alunos</a></td>
+                                <td><a href="FormAdcionaAlunoServlet?id=${turma.id}">Adicionar Alunos</a></td>
+				<td><a href="VerAlunosServlet?id=${turma.id}">Ver Alunos</a></td>
                                 <td><a href="VerStatusServlet?id=${turma.id}">Ver Status</a></td>
 			</tr>
 		</c:forEach>

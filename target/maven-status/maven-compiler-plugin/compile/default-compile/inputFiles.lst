@@ -10,6 +10,9 @@ D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissio
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\professor\ListaProfessoresServlet.java
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\aluno\AlteraAlunoServlet.java
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\model\ITurma.java
+D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\turma\FormAdcionaAlunoServlet.java
+D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\turma\AdcionaAlunoServlet.java
+D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\turma\VerAlunosServlet.java
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\turma\FormTurmaServlet.java
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\professor\FormProfessorServlet.java
 D:\Documentos\NetBeansProjects\admissional\src\main\java\br\com\rodrigo\admissional\servlet\turma\VerStatusServlet.java

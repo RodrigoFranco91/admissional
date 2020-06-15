@@ -76,6 +76,18 @@
         <servlet-name>VerStatusServlet</servlet-name>
         <servlet-class>br.com.rodrigo.admissional.servlet.turma.VerStatusServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerAlunosServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.VerAlunosServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdcionaAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.AdcionaAlunoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormAdcionaAlunoServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.FormAdcionaAlunoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FormProfessorServlet</servlet-name>
         <url-pattern>/FormProfessorServlet</url-pattern>
@@ -151,6 +163,18 @@
     <servlet-mapping>
         <servlet-name>VerStatusServlet</servlet-name>
         <url-pattern>/VerStatusServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerAlunosServlet</servlet-name>
+        <url-pattern>/VerAlunosServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdcionaAlunoServlet</servlet-name>
+        <url-pattern>/AdcionaAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormAdcionaAlunoServlet</servlet-name>
+        <url-pattern>/FormAdcionaAlunoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

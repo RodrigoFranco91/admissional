@@ -8,7 +8,6 @@ package br.com.rodrigo.admissional.servlet.turma;
 import br.com.rodrigo.admissional.model.Turma;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
-import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,22 +19,17 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rodri
  */
-public class VerStatusServlet extends HttpServlet {
+public class VerAlunosServlet extends HttpServlet {
 
     @Inject
     private TurmaRepository tr;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String status = "Fechada";
         Turma turma = tr.find(Long.parseLong(request.getParameter("id")));
-        List<Turma> turmas = tr.status(turma);
-        if (turmas.isEmpty()) {
-            status = "Aberta";
-        }
+       // request.setAttribute("alunos", turma.getAlunos());
         request.setAttribute("turma", turma);
-        request.setAttribute("status", status);
-        RequestDispatcher rd = request.getRequestDispatcher("turma/status.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("turma/alunos.jsp");
         rd.forward(request, response);
     }
 

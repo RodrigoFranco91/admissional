@@ -5,9 +5,12 @@
  */
 package br.com.rodrigo.admissional.servlet.turma;
 
+import br.com.rodrigo.admissional.model.Aluno;
 import br.com.rodrigo.admissional.model.Turma;
+import br.com.rodrigo.admissional.repository.AlunoRepository;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -20,23 +23,30 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rodri
  */
-public class VerStatusServlet extends HttpServlet {
+public class AdcionaAlunoServlet extends HttpServlet {
 
     @Inject
     private TurmaRepository tr;
 
+    @Inject
+    private AlunoRepository al;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String status = "Fechada";
+        List<Aluno> alunos = new ArrayList<>();
         Turma turma = tr.find(Long.parseLong(request.getParameter("id")));
-        List<Turma> turmas = tr.status(turma);
-        if (turmas.isEmpty()) {
-            status = "Aberta";
+        String[] idsAlunos = request.getParameterValues("alunoId");
+        for (int i = 0; i < idsAlunos.length; i++) {
+            Aluno aluno = al.find(Long.parseLong(idsAlunos[i]));
+            alunos.add(aluno);
         }
+        turma.setAlunos(alunos);
+        tr.update(turma);
+
         request.setAttribute("turma", turma);
-        request.setAttribute("status", status);
-        RequestDispatcher rd = request.getRequestDispatcher("turma/status.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("VerAlunosServlet");
         rd.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

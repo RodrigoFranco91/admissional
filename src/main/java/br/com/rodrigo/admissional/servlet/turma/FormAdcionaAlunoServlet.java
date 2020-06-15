@@ -5,9 +5,12 @@
  */
 package br.com.rodrigo.admissional.servlet.turma;
 
+import br.com.rodrigo.admissional.model.Aluno;
 import br.com.rodrigo.admissional.model.Turma;
+import br.com.rodrigo.admissional.repository.AlunoRepository;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -20,22 +23,23 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rodri
  */
-public class VerStatusServlet extends HttpServlet {
+public class FormAdcionaAlunoServlet extends HttpServlet {
 
     @Inject
     private TurmaRepository tr;
 
+    @Inject
+    private AlunoRepository al;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String status = "Fechada";
+
         Turma turma = tr.find(Long.parseLong(request.getParameter("id")));
-        List<Turma> turmas = tr.status(turma);
-        if (turmas.isEmpty()) {
-            status = "Aberta";
-        }
+        List<Aluno> alunos = al.findAll();
+        request.setAttribute("alunos", alunos);
         request.setAttribute("turma", turma);
-        request.setAttribute("status", status);
-        RequestDispatcher rd = request.getRequestDispatcher("turma/status.jsp");
+        
+        RequestDispatcher rd = request.getRequestDispatcher("turma/form-aluno.jsp");
         rd.forward(request, response);
     }
 
