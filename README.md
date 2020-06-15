@@ -9,12 +9,15 @@ Configuração Inicial para executar a aplicação:
 
 Paths das requisições: 
 Cadastrar Professor = http://localhost:8080/admissional/FormProfessorServlet
+
 Listar Professores = http://localhost:8080/admissional/ListaProfessoresServlet
 
 Cadastar Aluno = http://localhost:8080/admissional/FormAlunoServlet
+
 Listar Alunos = http://localhost:8080/admissional/ListaAlunoServlet
 
 Cadastrar Turma = http://localhost:8080/admissional/FormTurmaServlet
+
 Listar Turmas = http://localhost:8080/admissional/ListaTurmaServlet
 
 Obs: Na página de listagem de todos Modelos (professor, aluno e turma) haverá links para as demais requisições.
