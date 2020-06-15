@@ -14,6 +14,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -25,12 +27,19 @@ public class Turma implements ITurma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String codigo;
     private String sala;
+
+    @Temporal(TemporalType.DATE)
     private Date dataAbertura;
+
+    @Temporal(TemporalType.DATE)
     private Date dataEncerramento;
+    
     @ManyToOne
     private Professor professor;
+    
     @OneToMany
     private List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -50,7 +59,7 @@ public class Turma implements ITurma {
 
     @Override
     public void definirProfessor(Professor professor) {
-        this.professor = professor;
+        this.setProfessor(professor);
 
     }
 
@@ -90,6 +99,22 @@ public class Turma implements ITurma {
 
     public void setDataEncerramento(Date dataEncerramento) {
         this.dataEncerramento = dataEncerramento;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 
 }

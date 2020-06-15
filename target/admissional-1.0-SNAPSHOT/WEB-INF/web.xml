@@ -48,6 +48,30 @@
         <servlet-name>ListaAlunoServlet</servlet-name>
         <servlet-class>br.com.rodrigo.admissional.servlet.aluno.ListaAlunoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FormTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.FormTurmaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.CadastroTurmaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.ListaTurmaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeletaTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.DeletaTurmaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormUpdateTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.FormUpdateTurmaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlteraTurmaServlet</servlet-name>
+        <servlet-class>br.com.rodrigo.admissional.servlet.turma.AlteraTurmaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FormProfessorServlet</servlet-name>
         <url-pattern>/FormProfessorServlet</url-pattern>
@@ -95,6 +119,30 @@
     <servlet-mapping>
         <servlet-name>ListaAlunoServlet</servlet-name>
         <url-pattern>/ListaAlunoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormTurmaServlet</servlet-name>
+        <url-pattern>/FormTurmaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroTurmaServlet</servlet-name>
+        <url-pattern>/CadastroTurmaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaTurmaServlet</servlet-name>
+        <url-pattern>/ListaTurmaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletaTurmaServlet</servlet-name>
+        <url-pattern>/DeletaTurmaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormUpdateTurmaServlet</servlet-name>
+        <url-pattern>/FormUpdateTurmaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlteraTurmaServlet</servlet-name>
+        <url-pattern>/AlteraTurmaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
