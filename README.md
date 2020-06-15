@@ -8,6 +8,7 @@ Configuração Inicial para executar a aplicação:
 -Toda configuração de Banco foi feita dentro do servidor, não há nada no código.
 
 Paths das requisições: 
+
 Cadastrar Professor = http://localhost:8080/admissional/FormProfessorServlet
 
 Listar Professores = http://localhost:8080/admissional/ListaProfessoresServlet
