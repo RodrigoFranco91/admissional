@@ -8,8 +8,6 @@ package br.com.rodrigo.admissional.servlet.turma;
 import br.com.rodrigo.admissional.model.Turma;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;

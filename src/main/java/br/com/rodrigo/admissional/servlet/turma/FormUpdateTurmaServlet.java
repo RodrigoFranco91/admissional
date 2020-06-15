@@ -10,7 +10,6 @@ import br.com.rodrigo.admissional.model.Turma;
 import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -19,14 +18,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class FormUpdateTurmaServlet extends HttpServlet {
 
-   @Inject
+    @Inject
     private ProfessorRepository pr;
-   
+
     @Inject
     private TurmaRepository tr;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Professor> professores = pr.findAll();

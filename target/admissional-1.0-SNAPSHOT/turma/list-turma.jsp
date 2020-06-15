@@ -28,6 +28,7 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
 		</tr>
 		<c:forEach items="${turmas}" var="turma">
 			<tr>
@@ -46,6 +47,7 @@
 				<td><a href="FormUpdateTurmaServlet?id=${turma.id}">Alterar</a></td>
                                 <td><a href="AdicionaAlunoServlet?id=${turma.id}">Adicionar Alunos</a></td>
 				<td><a href="ListaAlunoServlet?id=${turma.id}">Ver Alunos</a></td>
+                                <td><a href="VerStatusServlet?id=${turma.id}">Ver Status</a></td>
 			</tr>
 		</c:forEach>
 	</table>

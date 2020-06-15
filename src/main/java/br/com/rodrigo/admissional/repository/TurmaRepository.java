@@ -47,4 +47,9 @@ public class TurmaRepository {
     public void update(Turma turma) {
         em.merge(turma);
     }
+    
+    public List<Turma> status(Turma turma){
+        return em.createQuery("SELECT t FROM Turma t WHERE t.dataAbertura > CURRENT_DATE AND t.id = :turmaId").setParameter("turmaId", turma.getId()).getResultList();
+
+    }
 }

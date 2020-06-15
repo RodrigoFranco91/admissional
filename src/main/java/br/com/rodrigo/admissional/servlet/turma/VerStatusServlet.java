@@ -5,17 +5,13 @@
  */
 package br.com.rodrigo.admissional.servlet.turma;
 
-import br.com.rodrigo.admissional.model.Professor;
 import br.com.rodrigo.admissional.model.Turma;
-import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,37 +19,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CadastroTurmaServlet extends HttpServlet {
+/**
+ *
+ * @author rodri
+ */
+public class VerStatusServlet extends HttpServlet {
 
     @Inject
     private TurmaRepository tr;
 
-    @Inject
-    private ProfessorRepository pr;
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        Turma turma = new Turma();
-        Date dataAberturaFormatada = null;
-        Date dataEncerramentoFormatada = null;
-        turma.setCodigo(request.getParameter("codigo"));
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy", new Locale("pt", "BR"));
-        try {
-            dataAberturaFormatada = formato.parse(request.getParameter("dataAbertura"));
-            dataEncerramentoFormatada = formato.parse(request.getParameter("dataEncerramento"));
-        } catch (ParseException ex) {
-            Logger.getLogger(CadastroTurmaServlet.class.getName()).log(Level.SEVERE, null, ex);
+        String status = "Fechada";
+        Turma turma = tr.find(Long.parseLong(request.getParameter("id")));
+        List<Turma> turmas = tr.status(turma);
+        if(turmas.isEmpty()){
+            status = "Aberta";
         }
-        turma.setDataAbertura(dataAberturaFormatada);
-        turma.setDataEncerramento(dataEncerramentoFormatada);
-        turma.setSala(request.getParameter("sala"));
-        Professor professor = pr.find(Long.parseLong(request.getParameter("professorId")));
-        turma.setProfessor(professor);
-
-        tr.create(turma);
-
-        RequestDispatcher rd = request.getRequestDispatcher("ListaTurmaServlet");
+        request.setAttribute("turma", turma);
+        request.setAttribute("status", status);
+        RequestDispatcher rd = request.getRequestDispatcher("turma/status.jsp");
         rd.forward(request, response);
     }
 

@@ -21,6 +21,7 @@ br\com\rodrigo\admissional\servlet\turma\FormUpdateTurmaServlet.class
 br\com\rodrigo\admissional\model\Professor.class
 br\com\rodrigo\admissional\model\ITurma.class
 br\com\rodrigo\admissional\repository\AlunoRepository.class
+br\com\rodrigo\admissional\servlet\turma\VerStatusServlet.class
 br\com\rodrigo\admissional\servlet\aluno\FormUpdateAlunoServlet.class
 br\com\rodrigo\admissional\servlet\professor\FormProfessorServlet.class
 br\com\rodrigo\admissional\servlet\professor\CadastroProfessorServlet.class

@@ -10,7 +10,6 @@ import br.com.rodrigo.admissional.model.Turma;
 import br.com.rodrigo.admissional.repository.ProfessorRepository;
 import br.com.rodrigo.admissional.repository.TurmaRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,7 +34,7 @@ public class AlteraTurmaServlet extends HttpServlet {
 
     @Inject
     private ProfessorRepository pr;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Turma turma = new Turma();
